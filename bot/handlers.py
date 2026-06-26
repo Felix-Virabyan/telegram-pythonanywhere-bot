@@ -243,6 +243,440 @@ def cmd_forget(message):
 
     reply = ask_ai(message.from_user.id, prompt)
     bot.send_message(message.chat.id, reply)
+
+
+@bot.message_handler(commands=["bored"], func=is_allowed)
+def cmd_bored(message):
+    prompt = """
+    You are Felix, an AI Entertainment Agent.
+
+    The user is bored.
+
+    Suggest one fun thing to do right now.
+
+    Requirements:
+    - Creative
+    - Different every time
+    - Suitable for almost anyone
+    - Friendly and enthusiastic
+    - Maximum 150 words
+    - Use emojis
+    - Encourage the user to try it
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["fun"], func=is_allowed)
+def cmd_fun(message):
+    prompt = """
+    You are Felix.
+
+    Suggest one random fun activity.
+
+    Requirements:
+    - Something entertaining
+    - Easy to start
+    - Family friendly
+    - Different every time
+    - Use emojis
+    - Maximum 150 words
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["surprise"], func=is_allowed)
+def cmd_surprise(message):
+    prompt = """
+    Surprise the user with something unexpected.
+
+    It could be:
+    - a weird fact
+    - a challenge
+    - a joke
+    - a recommendation
+    - a mystery
+    - a brain teaser
+
+    Make it exciting.
+
+    Requirements:
+    - Different every time
+    - Maximum 150 words
+    - Add emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["movie"], func=is_allowed)
+def cmd_movie(message):
+    prompt = """
+    Recommend 5 movies.
+
+    Requirements:
+    - Different genres
+    - Explain why each movie is worth watching
+    - Different every time
+    - No spoilers
+    - Friendly style
+    - Use emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["series"], func=is_allowed)
+def cmd_series(message):
+    prompt = """
+    Recommend 5 TV series.
+
+    Requirements:
+    - Different genres
+    - Brief description
+    - No spoilers
+    - Different every time
+    - Add emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["anime"], func=is_allowed)
+def cmd_anime(message):
+    prompt = """
+    Recommend 5 anime.
+
+    Requirements:
+    - Different genres
+    - Explain why they're worth watching
+    - No spoilers
+    - Different every time
+    - Add emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["music"], func=is_allowed)
+def cmd_music(message):
+    prompt = """
+    Recommend music for today.
+
+    Include:
+    - Artists
+    - Songs
+    - Genres
+
+    Requirements:
+    - Different every time
+    - Positive style
+    - Use emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["book"], func=is_allowed)
+def cmd_book(message):
+    prompt = """
+    Recommend 5 books.
+
+    Requirements:
+    - Different genres
+    - Explain why each is interesting
+    - No spoilers
+    - Different every time
+    - Use emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["game"], func=is_allowed)
+def cmd_game(message):
+    prompt = """
+    Recommend one fun game.
+
+    It may be:
+    - Video game
+    - Mobile game
+    - Board game
+    - Party game
+
+    Explain why it is fun.
+
+    Different every time.
+
+    Use emojis.
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["riddle"], func=is_allowed)
+def cmd_riddle(message):
+    prompt = """
+    Create one original riddle.
+
+    Requirements:
+    - Medium difficulty
+    - Don't reveal the answer immediately
+    - Family friendly
+    - Different every time
+    - Add emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["quiz"], func=is_allowed)
+def cmd_quiz(message):
+    prompt = """
+    Create a short quiz.
+
+    Requirements:
+    - 5 multiple-choice questions
+    - Include answers at the end
+    - Different every time
+    - Fun topics
+    - Add emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+
+
+@bot.message_handler(commands=["challenge"], func=is_allowed)
+def cmd_challenge(message):
+    prompt = """
+    You are Felix, an AI Entertainment Agent.
+
+    Create one fun daily challenge.
+
+    Requirements:
+    - Creative
+    - Safe
+    - Can be completed today
+    - Motivating
+    - Different every time
+    - Use emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["trivia"], func=is_allowed)
+def cmd_trivia(message):
+    prompt = """
+    Create one interesting trivia question.
+
+    Requirements:
+    - Multiple choice
+    - Reveal the answer afterwards
+    - Educational and fun
+    - Different every time
+    - Add emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["wouldyourather"], func=is_allowed)
+def cmd_would_you_rather(message):
+    prompt = """
+    Create one fun 'Would You Rather' question.
+
+    Requirements:
+    - Family friendly
+    - Funny
+    - Interesting
+    - Encourage thinking
+    - Different every time
+    - Add emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["story"], func=is_allowed)
+def cmd_story(message):
+    prompt = """
+    Write a short original story.
+
+    Requirements:
+    - Around 200 words
+    - Creative
+    - Interesting ending
+    - Family friendly
+    - Different every time
+    - Add emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["adventure"], func=is_allowed)
+def cmd_adventure(message):
+    prompt = """
+    Create a short interactive adventure.
+
+    Requirements:
+    - The user is the main character
+    - End with two choices for what happens next
+    - Fun and exciting
+    - Different every time
+    - Use emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["learn"], func=is_allowed)
+def cmd_learn(message):
+    prompt = """
+    Teach the user one fascinating topic.
+
+    Requirements:
+    - Easy to understand
+    - Interesting
+    - Around 150 words
+    - Different every time
+    - Use emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["discover"], func=is_allowed)
+def cmd_discover(message):
+    prompt = """
+    Help the user discover something new.
+
+    It can be:
+    - A hobby
+    - A scientific fact
+    - A historical event
+    - A hidden place
+    - A useful website
+    - A unique skill
+
+    Different every time.
+
+    Use emojis.
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["weekend"], func=is_allowed)
+def cmd_weekend(message):
+    prompt = """
+    Suggest five fun weekend activities.
+
+    Requirements:
+    - Indoor and outdoor ideas
+    - Suitable for different budgets
+    - Creative
+    - Different every time
+    - Use emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["dateidea"], func=is_allowed)
+def cmd_dateidea(message):
+    prompt = """
+    Suggest five creative date ideas.
+
+    Requirements:
+    - Romantic
+    - Fun
+    - Different budgets
+    - Family friendly
+    - Different every time
+    - Add emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["travelidea"], func=is_allowed)
+def cmd_travelidea(message):
+    prompt = """
+    Recommend three amazing travel destinations.
+
+    For each destination explain:
+    - Why visit
+    - Best season
+    - One unique attraction
+
+    Different every time.
+
+    Use emojis.
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["bucketlist"], func=is_allowed)
+def cmd_bucketlist(message):
+    prompt = """
+    Generate ten bucket list ideas.
+
+    Requirements:
+    - Inspiring
+    - Creative
+    - Achievable
+    - Different every time
+    - Use emojis
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["hobby"], func=is_allowed)
+def cmd_hobby(message):
+    prompt = """
+    Recommend three hobbies.
+
+    For each hobby explain:
+    - Why it's enjoyable
+    - What you'll need
+    - Beginner difficulty
+
+    Different every time.
+
+    Use emojis.
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
+
+@bot.message_handler(commands=["activity"], func=is_allowed)
+def cmd_activity(message):
+    prompt = """
+    The user wants something to do right now.
+
+    Suggest five activities.
+
+    Mix:
+    - Fun
+    - Relaxing
+    - Creative
+    - Educational
+    - Active
+
+    Different every time.
+
+    Use emojis.
+    """
+
+    reply = ask_ai(message.from_user.id, prompt)
+    bot.send_message(message.chat.id, reply)
     
 
 @bot.message_handler(commands=["help"], func=is_allowed)
