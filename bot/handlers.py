@@ -697,6 +697,30 @@ def cmd_help(message):
     /remember
     /recall
     /forget
+    /bored # I'm bored 
+    /fun # Random fun activity 
+    /surprise # Surprise me 
+    /movie # Movie recommendation 
+    /series # TV series recommendation 
+    /anime # Anime recommendation 
+    /music # Music recommendation 
+    /book # Book recommendation 
+    /game # Suggest a game 
+    /riddle # AI riddle 
+    /quiz # AI quiz 
+    /challenge # Daily challenge 
+    /trivia # Random trivia 
+    /wouldyourather # Would You Rather 
+    /story # Short story 
+    /adventure # Mini adventure 
+    /learn # Learn something interesting 
+    /discover # Discover something new 
+    /weekend # Weekend ideas 
+    /dateidea # Date ideas 
+    /travelidea # Places to explore 
+    /bucketlist # Fun bucket list ideas 
+    /hobby # Recommend hobbies 
+    /activity # Things to do now
     """
 
     prompt = f"""
